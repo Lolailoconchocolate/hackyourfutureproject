@@ -1,22 +1,11 @@
+ /*COMMON BLOCKS */
+
 body{
-  font-family: Verdana, Tahoma, "Trebuchet MS", "DejuVu Sans", "Bitstream Vera Sans", sans-serif;
-  text-align: center;
+  font-family: Verdana, Tahoma, "Trebuchet MS", "DejuVu Sans", "Bitstream Vera Sans", sans-serif; /*I used this font that seems quite close to the one on the given image. The info about how to include I took it from  https://stackoverflow.com/questions/14379788/font-family-not-loading */
+  text-align: center;  
 }
 
-header{
-  width: 100%;
-  height: 60px;
-  overflow: hidden;
-  background-color: rgb(44,62,80);
-}
-
-.header-strip{
-  width: 70%;
-  margin:auto;
-  overflow: hidden;
-  padding: 10px 0px 0px 0px /* Used to vertical align the text in the header*/
-}
-
+/* Common section to establish the distribution of the strips*/ 
 section{
   width: 70%;
   padding: 30px 0px 30px 0px;
@@ -24,46 +13,57 @@ section{
   overflow: hidden; 
 } 
 
+header{
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  background-color: rgb(44,62,80);/* I took the colors of the strips from the provided assignment image, using paint and its tool color picker*/  
+}
 
-header .yourfulln{
+/* HEADER-STRIP*/
+.header-strip{
+  width: 70%;
+  margin:auto;
+  overflow: hidden;
+  padding: 10px 0px 0px 0px /* Used to vertical align the text in the header*/
+}
+
+.yourfulln{
   line-height:15px;
   font-size: 20px;
   float: left;
   color: white;  
 }
 
-
-header .navigation{
+.navigation{
   float: right;
   padding: 15px 0px 0px 0px; /*I used this padding to center the navigation panel in the same height as the yourfulln*/
 }
 
 a:link{
-  color: white;
+  color: white; /* Non visited links have the color of the provided image*/
   font-size: 20px;
   padding:  20px;
   font-family: verdana;
-}
+} /* Responsive layout element included*/
 
 a:visited{
-  color: white
+  color: rgb(24, 188,156);
 }
 
 a:hover{
   color:rgb(24, 188,156)
-}
-
-a:link, a:visited{
-  vertical-align: super;
-}
+} /* Hover element included*/
 
 
+/* POSITION-STRIP*/
 .position-strip{
   padding: 40px;
   background-color: rgb(24, 188,156);
   color:white;
 }
 
+/* PORTFOLIO-STRIP*/
 .portfolio-strip{
 background-color: white;
 color: rgb(44, 62, 80);
@@ -85,8 +85,9 @@ h3 {
 }
 
 .project{
-  text-align:left
-}
+  text-align:left; /* Used to avoid the automatic center positioning of text*/ 
+} 
+
 .description{
  font-weight: bold;
  text-align: left;
@@ -96,8 +97,9 @@ h3 {
 .image-small1{
   float: right;
   padding: 0px 150px 0px 150px;
-}
+} /* Used to situate the images in the right side of the paragraph*/
 
+/* ABOUT-STRIP*/
 .about-strip{
   color: white;
   background-color: rgb(24, 188, 156);
@@ -110,14 +112,21 @@ h3 {
   width: 100%;
   margin: auto;
   text-align:left;
-}
+}  /* Used to organize the text in two columns. More info in html comment*/
 
+/* CONTACT-STRIP*/
 .contact-strip{
   background-color:white;
   color:(44, 62, 80);
   text-align: center;
 }
 
+.email-text::after{
+  content: "YOUR EMAIL";
+  color: rgb(24, 188, 156);
+} /* Pseudo element included*/
+
+/* LOCATION-STRIP*/
 .location-strip{
   background-color: rgb(44, 62, 80);
   color:white;
@@ -125,21 +134,18 @@ h3 {
 
 .loc-info{
   float:left
-}
+} /* Location info has a position independent from the SoMe info*/
 
 .around-web{
-  padding:0px 150px 0px 0px
-}
+  padding:0px 150px 0px 0px; /* Padding was used to center the information about SoMe*/
+} 
 
+
+/* FOOTER-STRIP*/
 footer {
   width: 100%;
   overflow: hidden;
-  margin-bottom: 0px;
-  padding: 0px 00px 0px 00px;
   background-color: rgb(26, 37, 47);
   color:white;
   width: 100%;
 }
-
-
-
